@@ -5,6 +5,7 @@
 ## 📸 Скриншоты
 ![Главное меню](screenshots/menu.png)
 ![Статистика сервера](screenshots/server_stats.png)
+![Статистика докера](screenshots/docker_stats.png)
 
 ## ✨ Возможности
 
