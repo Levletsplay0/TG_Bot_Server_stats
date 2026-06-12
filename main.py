@@ -20,7 +20,7 @@ def hello_msg(message):
         return
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = types.KeyboardButton("⚙️Получить хар-ки сервера⚙️")
-    btn2 = types.KeyboardButton("🐬Информация о работе докер контейнеров🐬")
+    btn2 = types.KeyboardButton("🐳Информация о работе докер контейнеров🐳")
     markup.add(btn1, btn2, row_width=1)
 
     os_name = platform.platform()
