@@ -21,7 +21,7 @@ def hello_msg(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = types.KeyboardButton("⚙️Получить хар-ки сервера⚙️")
     btn2 = types.KeyboardButton("🐬Информация о работе докер контейнеров🐬")
-    markup.add(btn1, btn2)
+    markup.add(btn1, btn2, row_width=1)
 
     os_name = platform.platform()
     bot.send_message(message.chat.id, f"{message.from_user.first_name}, добро пожаловать в {os_name}", reply_markup=markup)
