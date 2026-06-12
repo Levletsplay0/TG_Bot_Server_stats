@@ -37,10 +37,10 @@ def echo_all(message):
         bot.send_chat_action(message.chat.id, 'typing')
         server_info = get_server_info()
         bot.send_message(message.chat.id, server_info, parse_mode="HTML")
-    if message.text == "🐬Информация о работе докер контейнеров🐬":
+    if message.text == "🐳Информация о работе докер контейнеров🐳":
         bot.send_chat_action(message.chat.id, 'typing')
         docker_containers = get_docker_containers()
-        bot.send_message(message.chat.id, docker_containers, parse_mode="HTML")
+        bot.send_message(message.chat.id, docker_containers, parse_mode="HTML", disable_web_page_preview=True)
 
 
 
@@ -101,8 +101,8 @@ def get_docker_containers():
         client = docker.from_env()
         containers = client.containers.list(all=True)
         if not containers:
-            return "🐳 <b>Docker:</b> Контейнеры отсутствуют"
-        lines = ["🐳 <b>Docker контейнеры:</b>"]
+            return "<b>Docker:</b> Контейнеры отсутствуют"
+        lines = ["<b>Docker контейнеры:</b>"]
         for c in containers:
             name = c.name
             status = c.status
