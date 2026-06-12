@@ -40,7 +40,7 @@ def echo_all(message):
     if message.text == "🐳Информация о работе докер контейнеров🐳":
         bot.send_chat_action(message.chat.id, 'typing')
         docker_containers = get_docker_containers()
-        bot.send_message(message.chat.id, docker_containers, parse_mode="HTML", disable_web_page_preview=True)
+        bot.send_message(message.chat.id, docker_containers, parse_mode="HTML", link_preview_options=types.LinkPreviewOptions(is_disabled=True))
 
 
 
